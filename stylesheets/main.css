@@ -28,31 +28,38 @@ section{
   line-height: 120%;
 }
 
-section a{
-  color:#06f;
-  text-decoration:none;
-}
+  section p{
+    width:60%;
+  }
 
-section a:hover{
-  color:#3af;
-  text-decoration:underline;
-}
+  section a{
+    color:#06f;
+    text-decoration:none;
+  }
 
-section p{
-  width:60%;
-}
+  section a:hover{
+    color:#3af;
+    text-decoration:underline;
+  }
 
 header{
 /*  background-color:#009; */
   padding-top:50px;
   width:85%;
   text-align:left;
-}
 
-header div#title{
   font-size:x-large;
   margin-bottom:10px;
 }
+
+  header a{
+    text-decoration:none;
+    color:#06f;
+  }
+
+  header a:hover{
+    color:#3af;
+  }
 
 footer{
   margin-top:10px;
@@ -62,31 +69,31 @@ footer{
   font-size:small;
 }
 
-footer div#breadcrumb{
-  text-align:right;
-}
+  footer div#breadcrumb{
+    text-align:right;
+  }
 
-footer span.copyright{
-  text-align:left;
-}
+  footer span.copyright{
+    text-align:left;
+  }
 
-footer span.here{
-  margin-right:30px;
+  footer span.here{
+    margin-right:30px;
 
-  color:#000;
-}
+    color:#000;
+  }
 
-footer a{
-  margin-right:30px;
+  footer a{
+    margin-right:30px;
 
-  text-decoration:none;
-  color:#06f;
-}
+    text-decoration:none;
+    color:#06f;
+  }
 
-footer a:hover{
-  color:#3af;
-  border-bottom:2px dotted #ccc;
-}
+  footer a:hover{
+    color:#3af;
+    border-bottom:2px dotted #ccc;
+  }
 
 nav{
   position:fixed;
@@ -100,50 +107,37 @@ nav{
   background-color:#000;
 }
 
-nav ul{
-  padding-bottom:1em;
-  border-bottom:1px solid #fff;
+  nav ul{
+    padding-bottom:1em;
+    border-bottom:1px solid #fff;
 
-  list-style-type:none;
-  text-align:center;
-}
+    list-style-type:none;
+    text-align:center;
+  }
 
-nav ul li{
-  float:left;
-  width:8em;
-}
+    nav ul li{
+      float:left;
+      width:8em;
+    }
 
-/*
-div#navi ul li:last-child{
-  width:500px;
+      nav ul li span.here{
+        padding-left:20px;
+        padding-right:20px;
+        border-bottom:4px solid #f90;
+        color:#f90;
+      }
 
-  position:absolute;
-  top:1em;
-  left:50em;
+      nav ul li a{
+        display:block;
+        
+        text-decoration:none;
+        color:#fff;
+      }
 
-  text-align:right;
-  color:#fff;
-}
-*/
-
-nav ul li a{
-  display:block;
-  
-  text-decoration:none;
-  color:#fff;
-}
-
-nav ul li span.here{
-  padding-left:20px;
-  padding-right:20px;
-  border-bottom:4px solid #f90;
-  color:#f90;
-}
-
-nav ul li a:hover{
-  background-color:#eee;
-  color:#000;
-  text-decoration:none;
-}
+      nav ul li a:hover{
+        background-color:#eee;
+        color:#000;
+        text-decoration:none;
+      }
 
 
