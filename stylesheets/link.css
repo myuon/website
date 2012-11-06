@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+div#content dl{
+  margin-top:3em;
+}
+
+div#content dl dt{
+  float:left;
+  width:10em;
+  height:3em;
+  padding-bottom:1em;
+}
+
+div#content dl dd{
+  width:45em;
+  height:3em;
+  padding-bottom:1em;
+  padding-left:5em;
+}
+
+
