@@ -1,17 +1,17 @@
 @charset "utf-8";
 
-div#content table{
+section table{
   line-height:1.2em;
-  border-spacing:40px 20px;
+  border-spacing:20px 10px;
   margin-bottom:30px;
 }
 
-div#content table tbody tr{
+section table tbody tr{
   width:50em;
   height:1.5em;
 }
 
-div#content table tbody th{
+section table tbody th{
   width:11em;
   padding-left:10px;
   border-left:10px double #f90;
@@ -21,7 +21,7 @@ div#content table tbody th{
   font-weight:normal;
 }
 
-div#content table tbody td{
+section table tbody td{
   width:40em;
   padding-left:10px;
   border-bottom:1px solid #f00;

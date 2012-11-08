@@ -1,16 +1,16 @@
 @charset "utf-8";
 
-div#content img.sample{
+section img.sample{
   padding-bottom:5px;
   width:150px;
   float:left;
 }
 
-div#content a img.sample:last-child{
+section a img.sample:last-child{
   float:none;
 }
 
-div#content a:hover img.sample{
+section a:hover img.sample{
   margin-bottom:-1px;
   border-bottom:1px solid #f00;
 

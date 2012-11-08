@@ -1,19 +1,19 @@
 @charset "utf-8";
 
-div#content dl{
+section dl{
   margin-top:3em;
 }
 
-div#content dl dt{
+section dl dt{
   float:left;
-  width:10em;
-  height:3em;
+  width:300px;
+  height:40px;
   padding-bottom:1em;
 }
 
-div#content dl dd{
-  width:45em;
-  height:3em;
+section dl dd{
+  width:450px;
+  height:40px;
   padding-bottom:1em;
   padding-left:5em;
 }

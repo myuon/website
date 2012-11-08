@@ -1,41 +1,8 @@
 @charset "utf-8";
 
-div#header div#title a{
-  text-decoration:none;
-  color:#06f;
-}
-
-div#header div#title a:hover{
-  color:#3af;
-}
-
-div#content{
-  height: 500px;
-}
-
-div#content div#abstruct{
-  margin-top:100px;
-  width:500px;
-  padding:10px 10px;
-  padding-left:20px;
-}
-
-div#content div#abstruct div#history{
-  width:300px;
+section article.box p{
+  width:400px;
   height:100px;
-  margin-top:15px;
-  padding:3px 7px;
-  line-height:1.3em;
   overflow-y:scroll;
-  border:1px solid #007;
-  font-size:small;
 }
-
-div#content div#env{
-  padding-left:20px;
-  line-height:1.3em;
-  font-size:small;
-}
-
-
 
