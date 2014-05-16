@@ -1,0 +1,153 @@
+@import "compass";
+@import url("./font-awesome.min.css");
+$header-color: rgb(255, 216, 147);
+$content-link-color: #933;
+
+body {
+  background-color: rgb(250, 250, 250);
+}
+
+#nologo-content,
+#logo-content,
+#content {
+  margin: 0;
+
+  border: {
+    right: 5px solid $header-color;
+    left: 5px solid $header-color;
+  }
+}
+
+header#logo {
+  margin: 0 auto;
+
+  #logo-content {
+    height: 12em;
+
+    background: {
+      color: $header-color;
+      image: url("../img/design/header_5_15.png");
+      repeat: no-repeat;
+      position: right top;
+    }
+  }
+
+  #nologo-content {
+    background: {
+      color: $header-color;
+    }
+  }
+
+  a {
+    margin-left: 20px;
+    color: #933;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: #c33;
+  }
+}
+
+article {
+  background-color: #fff;
+  padding: 30px 20px;
+}
+
+#history {
+  overflow-y: scroll;
+  height: 8em;
+  border: 3px solid #aaa;
+}
+
+#content {
+  line-height: 1.6em;
+
+  section {
+    margin-left: 2.0em;
+    margin-right: 2.0em;
+  }
+
+  a { color: $content-link-color; }
+  a:hover {
+    text-decoration: none;
+    color: #c33;
+  }
+
+  p { text-indent: 1.0em; }
+
+  table {
+    i {
+      width: 17px;
+      text-align: center;
+    }
+  }
+}
+
+.grid-gallery img {
+    border: 2px solid #999;
+    @include border-radius(2px, 2px);
+}
+
+.list {
+  .list-title {
+    font-size: 1.2em;
+    padding: 5px 10px;
+    background-color: #ddd;
+    @include border-radius(3px, 3px);
+  }
+
+  p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+nav {
+  text-align: center;
+  background-color: #fff;
+  margin-left: -2.5em;
+
+  ul {
+    border: {
+      top: 1px solid #b7b7b7;
+      bottom: 1px solid #b7b7b7;
+    }
+
+    li:not(:last-child) a {
+      border-bottom: 1px dashed #ddd;
+    }
+
+    li.menu-heading {
+      padding: {
+	top: 5px;
+	bottom: 5px;
+      }
+
+      display: block;
+      color: #556;
+      font-size: 90%;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+
+  a {
+    display: block;
+    color: #777;
+    padding: {
+      top: 15px;
+      bottom: 15px;
+    }
+    text-decoration: none;
+  }
+
+  a:hover {
+    background-color: #eee;
+  }
+}
+
+footer {
+  border-top: 1px dotted #aaa;
+  text-align: center;
+  margin: 0px 10px 10px 10px;
+}

@@ -1,0 +1,103 @@
+= Haml::Engine.new(File.read("haml/_header.haml")).render
+
+%header#logo
+  .pure-g-r
+    .pure-u-3-24
+    .pure-u-4-5#nologo-content
+      %h1
+        %a{:href => "http://myuon.digi2.jp/"} みょんさんの。
+
+.pure-g-r
+  .pure-u-3-24
+    = Haml::Engine.new(File.read("haml/_nav.haml")).render
+  .pure-u-4-5#content
+    %article
+      %header
+        %h2 ゲームとかゲームじゃないものとか
+      %section.list
+        %h3 DLゲーム・DLソフト
+        .pure-u-4-5
+          .list-title
+            %i.fa.fa-download
+            %a{:href => "http://myuon.digi2.jp/chain-complex/index.html", :target => "_blank"} チェイン・コンプレックス
+          %p
+            %img{:src => "http://myuon.digi2.jp/chain-complex/img/banner_r.png"}
+          %p
+            制作:2013年。勢いで作ったノベルゲーム。
+        .pure-u-4-5
+          .list-title
+            %i.fa.fa-download
+            %a{:href => "http://www.mediafire.com/?491zt2xl43ujxjc", :target => "_blank"} 桜雨の季節-melty heart-
+          %p
+            制作:2010年。吉里吉里で作ったノベルゲーム。
+
+
+        %h3 ブラウザゲーム・webアプリ
+        .pure-u-4-5
+          .list-title
+            %i.fa.fa-sitemap
+            %a{:href => "http://myuon.digi2.jp/fourKings/index.html", :target => "_blank"} fourKings
+          %p
+            制作:2013年。大富豪とナポレオンを足して2で割ったみたいなトランプゲーム。→
+            %a{:href => "https://github.com/myuon/fourKings", :target => "_blank"}<> repo
+        .pure-u-4-5
+          .list-title
+            %i.fa.fa-sitemap
+            %a{:href => "http://prooving-everyday.appspot.com/", :target => "_blank"}
+              %del まいにち定理証明
+          %p
+            制作:2012年。証明した定理の数をTwitterでつぶやくだけのwebアプリケーション。
+            %strong 現在利用できません。
+
+        %h3 その他
+        .pure-u-4-5
+          .list-title
+            %i.fa.fa-font
+            %a{:href => "fonts/LudwenicFont.ttf"} LudwenicFont(ttf)
+          %p
+            制作:2014年。古代文字みたいな感じの手書きフォントです。ゲームで魔方陣を描くために創りました(アルファベットで表示)。
+            →
+            %a{:rel => "lightbox[ludwenicfont]", :title => "LudwenicFont", :href => "img/design/ss_ludwenicfont.png"}<>
+              サンプル
+          %p
+            %a{:href => "https://myuon.github.io/Ludwenics/magical/LudwenicFont.html", :target => "_blank"}<>
+              解説ページ
+
+        .pure-u-4-5
+          .list-title
+            %i.fa.fa-font
+            %a{:href => "fonts/MyonFont.ttf"} MyonFont(ttf)
+          %p
+            %img{:src => "img/design/myonfont_bannar.png"}
+          %p
+            制作:2013年。手書きフォントです(注:バランス悪いのであんまり使い物にならない)。
+            →
+            %a{:rel => "lightbox[myonfont]", :title => "MyonFont", :href => "img/design/ss_myonfont.png"}<>
+              サンプル
+
+        .pure-u-4-5
+          .list-title
+            %i.fa.fa-shopping-cart
+            %a{:href => "http://www.dlsite.com/home/work/=/product_id/RJ105222.html", :target => "_blank"} 東方言語録
+          %p
+            制作:2012年。東方キャラがプログラミング言語を紹介する薄い本。
+            %a{:href => "http://bunbunmaru-np.com/"}> 第百二十七季 文々。新聞友の会
+            で出店しました。
+
+        %h3{:style => "border-top: 1px solid #aaa; padding-top: 20px;"} 開発中のもの
+        .pure-u-4-5
+          .list-title
+            %i.fa.fa-cogs
+            %a{:href => "https://github.com/myuon/Chimera", :target => "_blank"} Chimera
+          %p
+            現在制作中。弾幕STGになる予定。
+
+        .pure-u-4-5
+          .list-title
+            %i.fa.fa-cogs
+            %a{:href => "https://github.com/myuon/Ludwenics", :target => "_blank"} Ludwenics
+          %p
+            Chimeraの制作にあたって用意したファンタジー世界の設定集。
+
+
+= Haml::Engine.new(File.read("haml/_footer.haml")).render

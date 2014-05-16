@@ -1,0 +1,137 @@
+= Haml::Engine.new(File.read("haml/_header.haml")).render
+
+%header#logo
+  .pure-g-r
+    .pure-u-3-24
+    .pure-u-4-5#logo-content
+      %h1
+        %a{:href => "http://myuon.digi2.jp/"} みょんさんの。
+
+.pure-g-r
+  .pure-u-3-24
+    = Haml::Engine.new(File.read("haml/_nav.haml")).render
+  .pure-u-4-5#content
+    %article
+      %header
+        %h2 アカウント
+      %section
+        %table.pure-table
+          %tr
+            %td
+              %i.fa.fa-twitter>
+              \ twitter
+            %td
+              %a{:href => "https://twitter.com/myuon_myon", :target => "_blank"} @myuon_myon
+              %a.twitter-follow-button{:count => "false", "data-lang" => "ja", "data-show-" => "", :href => "https://twitter.com/myuon_myon"} @myuon_myonさんをフォロー
+              :javascript
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+          %tr
+            %td
+              %i.fa.fa-twitter>
+              \ twitter
+            %td
+              %a{:href => "https://twitter.com/t_iru", :target => "_blank"} @t_iru
+              %a.twitter-follow-button{:count => "false", "data-lang" => "ja", "data-show-" => "", :href => "https://twitter.com/t_iru"} @t_iruさんをフォロー
+              :javascript
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+          %tr
+            %td
+              %i.fa.fa-rss>
+              \ はてなブログ
+            %td
+              %a{:href => "http://d.hatena.ne.jp/myuon_myon/", :target => "_blank"} Just $ A sandbox
+          %tr
+            %td
+              %i.fa.fa-github>
+              \ Github
+            %td
+              %a{:href => "https://github.com/myuon/", :target => "_blank"} myuon
+          %tr
+            %td
+              %i.fa.fa-question>
+              \ Qiita
+            %td
+              %a{:href => "http://qiita.com/users/myuon_myon", :target => "_blank"} myuon_myon
+          %tr
+            %td
+              %i.fa.fa-picture-o>
+              \ pixiv
+            %td
+              %a{:href => "http://pixiv.me/myuon_myon", :target => "_blank"}
+                %img{:src => "img/design/pixiv.gif"}/
+          %tr
+            %td
+              %i.fa.fa-picture-o>
+              \ TINAMI
+            %td
+              %a{:href => "http://www.tinami.com/creator/profile/44342", :target => "_blank"}
+                %img{:src => "img/design/tinami.gif"}/
+          %tr
+            %td
+              %i.fa.fa-youtube
+              \ Youtube
+            %td
+              %a{:href => "http://www.youtube.com/user/myuonmyon/", :target => "_blank"}
+                user/myuon_myon
+          %tr
+            %td
+              %i.fa.fa-youtube-play>
+              \ niconico
+            %td
+              %a{:href => "http://www.nicovideo.jp/user/3398575/video", :target => "_blank"} user/3398575
+          %tr
+            %td
+              %i.fa.fa-bookmark>
+              \ はてなブックマーク
+            %td
+              %a{:href => "http://b.hatena.ne.jp/myuon_myon/bookmark", :target => "_blank"} myuon_myon
+          %tr
+            %td
+              %i.fa.fa-book>
+              \ 読書メーター
+            %td
+              %a{:href => "http://book.akahoshitakuya.com/u/271650", :target => "_blank"} u/271650
+          %tr
+            %td
+              %i.fa.fa-soundcloud>
+              \ SoundCloud
+            %td
+              %a{:href => "https://soundcloud.com/myuon_myon", :target => "_blank"} myuon_myon
+          %tr
+            %td
+              %i.fa.fa-envelope>
+              \ Gmail
+            %td
+              %a Gmail: ioi.joi.koi.loi(at)gmail.com
+          %tr
+            %td
+              %i.fa.fa-skype>
+              \ Skype
+            %td
+              %a skype: myuon_myon
+
+    %article
+      %header
+        %h2 更新履歴
+      %section#history
+        %ul
+          %li 2014/05/15 サイトをリニューアル
+          %li 2014/02/22 TOPにアカウントを追加 PICTURESに画像を追加
+          %li
+            2014/02/01 WORKSに
+            %a{:href => "http://myuon.digi2.jp/fourKings/index.html", :target => "_blank"}> fourKings[ゲーム]
+            を追加
+          %li 2013/12/27 PICTURESにアイコンと便利画像を追加
+          %li
+            2013/11/13 WORKSに
+            %a{:href => "http://myuon.digi2.jp/chain-complex/index.html"}> チェイン・コンプレックス[ノベルゲーム]
+            を追加
+          %li 2013/08/13 WORKSにMyonFontを追加
+          %li 2013/07/15 配色等を調節
+          %li 2013/07/01 PICTURESをオープン
+          %li 2013/06/21 シンプルなデザインにリニューアル
+          %li 2012/11/08 サイトデザインを変更
+          %li 2012/10/13 サイトデザインの修正
+          %li 2012/08/26 サイト開設
+
+= Haml::Engine.new(File.read("haml/_footer.haml")).render

@@ -1,0 +1,149 @@
+@import url("./font-awesome.min.css");
+/* line 6, ../../sass/custom.css.scss */
+body {
+  background-color: #fafafa;
+}
+
+/* line 12, ../../sass/custom.css.scss */
+#nologo-content,
+#logo-content,
+#content {
+  margin: 0;
+  border-right: 5px solid #ffd893;
+  border-left: 5px solid #ffd893;
+}
+
+/* line 21, ../../sass/custom.css.scss */
+header#logo {
+  margin: 0 auto;
+}
+/* line 24, ../../sass/custom.css.scss */
+header#logo #logo-content {
+  height: 12em;
+  background-color: #ffd893;
+  background-image: url("../img/design/header_5_15.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+/* line 35, ../../sass/custom.css.scss */
+header#logo #nologo-content {
+  background-color: #ffd893;
+}
+/* line 41, ../../sass/custom.css.scss */
+header#logo a {
+  margin-left: 20px;
+  color: #933;
+}
+/* line 46, ../../sass/custom.css.scss */
+header#logo a:hover {
+  text-decoration: none;
+  color: #c33;
+}
+
+/* line 52, ../../sass/custom.css.scss */
+article {
+  background-color: #fff;
+  padding: 30px 20px;
+}
+
+/* line 57, ../../sass/custom.css.scss */
+#history {
+  overflow-y: scroll;
+  height: 8em;
+  border: 3px solid #aaa;
+}
+
+/* line 63, ../../sass/custom.css.scss */
+#content {
+  line-height: 1.6em;
+}
+/* line 66, ../../sass/custom.css.scss */
+#content section {
+  margin-left: 2.0em;
+  margin-right: 2.0em;
+}
+/* line 71, ../../sass/custom.css.scss */
+#content a {
+  color: #993333;
+}
+/* line 72, ../../sass/custom.css.scss */
+#content a:hover {
+  text-decoration: none;
+  color: #c33;
+}
+/* line 77, ../../sass/custom.css.scss */
+#content p {
+  text-indent: 1.0em;
+}
+/* line 80, ../../sass/custom.css.scss */
+#content table i {
+  width: 17px;
+  text-align: center;
+}
+
+/* line 87, ../../sass/custom.css.scss */
+.grid-gallery img {
+  border: 2px solid #999;
+  -webkit-border-radius: 2px 2px;
+  -moz-border-radius: 2px / 2px;
+  border-radius: 2px / 2px;
+}
+
+/* line 93, ../../sass/custom.css.scss */
+.list .list-title {
+  font-size: 1.2em;
+  padding: 5px 10px;
+  background-color: #ddd;
+  -webkit-border-radius: 3px 3px;
+  -moz-border-radius: 3px / 3px;
+  border-radius: 3px / 3px;
+}
+/* line 100, ../../sass/custom.css.scss */
+.list p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* line 106, ../../sass/custom.css.scss */
+nav {
+  text-align: center;
+  background-color: #fff;
+  margin-left: -2.5em;
+}
+/* line 111, ../../sass/custom.css.scss */
+nav ul {
+  border-top: 1px solid #b7b7b7;
+  border-bottom: 1px solid #b7b7b7;
+}
+/* line 117, ../../sass/custom.css.scss */
+nav ul li:not(:last-child) a {
+  border-bottom: 1px dashed #ddd;
+}
+/* line 121, ../../sass/custom.css.scss */
+nav ul li.menu-heading {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: block;
+  color: #556;
+  font-size: 90%;
+  border-bottom: 1px solid #ddd;
+}
+/* line 134, ../../sass/custom.css.scss */
+nav a {
+  display: block;
+  color: #777;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-decoration: none;
+}
+/* line 144, ../../sass/custom.css.scss */
+nav a:hover {
+  background-color: #eee;
+}
+
+/* line 149, ../../sass/custom.css.scss */
+footer {
+  border-top: 1px dotted #aaa;
+  text-align: center;
+  margin: 0px 10px 10px 10px;
+}

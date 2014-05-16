@@ -1,8 +1,0 @@
-@charset "utf-8";
-
-.content dl dt span[class*="entypo-"] {
-    color: #009;
-    display: inline-block;
-    width: 20px;
-    text-align: center;
-}
