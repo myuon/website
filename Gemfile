@@ -5,4 +5,5 @@ group :development do
   gem 'guard-haml'
   gem 'guard-sass'
   gem 'guard-compass'
+  gem 'redcarpet'
 end

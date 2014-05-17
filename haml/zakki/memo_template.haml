@@ -1,0 +1,12 @@
+!!! 5
+
+%meta{:charset => "utf-8"}/
+%title みょんさんの。
+%link{:href => "../stylesheets/avenir-white.css", :rel => "stylesheet"}/
+
+%ul
+  %li
+    %a{:href => "../memo.html"} back
+
+%p
+  = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new()).render(File.read("haml/zakki/FILE_NAME"))

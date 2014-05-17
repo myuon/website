@@ -1,0 +1,29 @@
+= Haml::Engine.new(File.read("haml/_header.haml")).render
+
+%header#logo
+  .pure-g-r
+    .pure-u-3-24
+    .pure-u-4-5#nologo-content
+      %h1
+        %a{:href => "http://myuon.digi2.jp/"} みょんさんの。
+
+.pure-g-r
+  .pure-u-3-24
+    = Haml::Engine.new(File.read("haml/_nav.haml")).render
+  .pure-u-4-5#content
+    %article
+      %header
+        %h2 雑記
+      %section.pure-u-3-5
+        %p どうでもいい雑記をまとめました。エッセー的なものとか愚痴とかで、なんとなく残しておきたいものをここに投げておく。技術的なことははてブロで。
+        %p
+          テーマは
+          %a{:href => "https://github.com/jasonm23/markdown-css-themes", :target => "_blank"}<> jasonm23/markdown-css-themes
+          より。
+
+        %ul
+          %li
+            2014-03-24
+            %a{:href => "zakki/dejavu.html"} デジャヴのはなし
+
+= Haml::Engine.new(File.read("haml/_footer.haml")).render
