@@ -4,7 +4,8 @@ $header-color: rgb(255, 216, 147);
 $content-link-color: #933;
 
 body {
-  background-color: rgb(250, 250, 250);
+//  background-color: rgb(250, 250, 250);
+  @include background-image(linear-gradient(rgb(245, 245, 245), rgb(255, 255, 255)));
 }
 
 #nologo-content,
@@ -103,6 +104,14 @@ article {
   }
 }
 
+.order {
+  width: 24em;
+  p {
+    margin-left: 1em;
+    &:first-letter { margin-left: -1em; }
+  }
+}
+
 nav {
   text-align: center;
   background-color: #fff;
@@ -124,9 +133,11 @@ nav {
 	bottom: 5px;
       }
 
+      background-color: #eee;
       display: block;
       color: #556;
       font-size: 90%;
+      font-weight: bold;
       border-bottom: 1px solid #ddd;
     }
   }
