@@ -1,0 +1,31 @@
+@import url("./font-awesome.min.css");
+/* line 4, ../../sass/manga.css.scss */
+.container {
+  min-width: 500px;
+  width: 50%;
+  margin: auto;
+}
+/* line 10, ../../sass/manga.css.scss */
+.container #content img {
+  display: block;
+  margin: auto;
+  width: 500px;
+}
+
+/* line 17, ../../sass/manga.css.scss */
+.nav {
+  background-color: #fff;
+}
+/* line 20, ../../sass/manga.css.scss */
+.nav a {
+  border: 1px solid #aaa;
+  color: #777;
+  text-decoration: none;
+  display: block;
+  padding: 10px 30px;
+  text-align: center;
+}
+/* line 24, ../../sass/manga.css.scss */
+.nav a:hover {
+  background-color: #eee;
+}

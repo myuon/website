@@ -1,0 +1,32 @@
+@import "compass";
+@import url("./font-awesome.min.css");
+
+.container {
+//  background-color: rgb(240, 240, 240);
+  min-width: 500px;
+  width: 50%;
+  margin: auto;
+
+  #content img {
+    display: block;
+    margin: auto;
+    width: 500px;
+  }
+}
+
+.nav {
+  background-color: #fff;
+
+  a {
+    border: 1px solid #aaa;
+    color: #777;
+    text-decoration: none;
+    &:hover {
+      background-color: #eee;
+    }
+
+    display: block;
+    padding: 10px 30px;
+    text-align: center;
+  }
+}

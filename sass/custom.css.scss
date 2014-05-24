@@ -138,11 +138,12 @@ nav {
       color: #556;
       font-size: 90%;
       font-weight: bold;
+      border-top: 1px solid #ddd;
       border-bottom: 1px solid #ddd;
     }
   }
 
-  a {
+  li > a {
     display: block;
     color: #777;
     padding: {
@@ -150,10 +151,10 @@ nav {
       bottom: 15px;
     }
     text-decoration: none;
-  }
 
-  a:hover {
-    background-color: #eee;
+    &:hover {
+      background-color: #eee;
+    }
   }
 }
 

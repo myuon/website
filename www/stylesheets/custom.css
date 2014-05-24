@@ -145,10 +145,11 @@ nav ul li.menu-heading {
   color: #556;
   font-size: 90%;
   font-weight: bold;
+  border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
 }
-/* line 145, ../../sass/custom.css.scss */
-nav a {
+/* line 146, ../../sass/custom.css.scss */
+nav li > a {
   display: block;
   color: #777;
   padding-top: 15px;
@@ -156,11 +157,11 @@ nav a {
   text-decoration: none;
 }
 /* line 155, ../../sass/custom.css.scss */
-nav a:hover {
+nav li > a:hover {
   background-color: #eee;
 }
 
-/* line 160, ../../sass/custom.css.scss */
+/* line 161, ../../sass/custom.css.scss */
 footer {
   border-top: 1px dotted #aaa;
   text-align: center;

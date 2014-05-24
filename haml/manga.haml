@@ -19,6 +19,10 @@
       %section.order
         %h3 ウサギと犬。
         %p
+          %img{:src => "img/usagi/usagi_bannar.png"}
+        %p
+          %a{:href => "manga/usagi.html"} 最初から読む
+        %p
           - usagi_i = Proc.new do |i|
             %a{:href => "img/usagi/usa#{i}.png", :rel => "lightbox[usagi]", :title => "##{i}"} ##{("%02d" % i)}
           - usagi = Proc.new { |arr| arr.each { |i| usagi_i.call(i) }}
@@ -37,6 +41,5 @@
         %p
           %a{:href => "img/manga/haskell_coq_1.png", :rel => "lightbox[4koma]"} HaskellたんとCoqたん
           %a{:href => "img/manga/lens_comic.png", :rel => "lightbox[4koma]"} Lens
-
 
 = Haml::Engine.new(File.read("haml/_footer.haml")).render
