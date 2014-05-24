@@ -6,4 +6,6 @@ group :development do
   gem 'guard-sass'
   gem 'guard-compass'
   gem 'redcarpet'
+  gem 'guard-coffeescript'
+  gem 'guard-markdown'
 end

@@ -8,5 +8,4 @@
   %li
     %a{:href => "../memo.html"} back
 
-%p
-  = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new()).render(File.read("haml/zakki/FILE_NAME"))
+<%= @body %>
