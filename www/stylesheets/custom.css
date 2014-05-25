@@ -167,3 +167,12 @@ footer {
   text-align: center;
   margin: 0px 10px 10px 10px;
 }
+
+/* line 167, ../../sass/custom.css.scss */
+#counter {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 0;
+  padding: 0;
+}
