@@ -7,35 +7,47 @@ getURLParam = () ->
     v[h[0]] = h[1]
   return v
 
-getCurrentNumber = parseInt(getURLParam()['page'], 10)
-getPath = (p) -> "?page=#{p}"
+isURLExists = (url) ->
+  http = new XMLHttpRequest()
+  http.open('HEAD', url, false)
+  http.send()
+  return http.status != 404;
 
-getImgTag = (n) -> "<img src=\"../img/usagi/usa#{n}.png\" />"
+getCurrentNumber = () ->
+  n = parseInt(getURLParam()['page'], 10)
+  if n > 0
+    return n
+  else
+    return 0
+
+getPath = (p) -> "?page=#{p}"
+getImgPath = (n) -> "../img/usagi/usa#{n}.png"
+getImgTag = (n) -> "<img src=#{getImgPath(n)} />"
 
 @loadImg = () ->
   div = document.getElementById("content")
-  n = getCurrentNumber
-  if n > 0
-    div.innerHTML = "<a href=#{getPath(n+1)}>#{getImgTag(n)}</a>"
-  else
-    div.innerHTML = "<a href=#{getPath(1)}>#{getImgTag(0)}</a>"
+  n = getCurrentNumber()
+  div.innerHTML = "<a href=#{getPath(n+1)}>#{getImgTag(n)}</a>"
+
+  unless isURLExists(getImgPath(n))    
+    div.innerHTML = ""
 
 nextLink = () ->
   lis = document.getElementsByClassName("nextPage")
   for li in lis
-    n = getCurrentNumber
-    if n > 0
-      li.innerHTML = "<a href=#{getPath(getCurrentNumber+1)}>次へ進む</a>"
-    else
-      li.innerHTML = "<a href=#{getPath(1)}>次へ進む</a>"
+    n = getCurrentNumber()
+    li.innerHTML = "<a href=#{getPath(n+1)}>次へ進む</a>"
+
+    unless isURLExists(getImgPath(n))
+      li.innerHTML = ""
 
 previousLink = () ->
   lis = document.getElementsByClassName("previousPage")
   for li in lis
-    n = getCurrentNumber
+    n = getCurrentNumber()
     if n > 0
       li.innerHTML = "<a href=#{getPath(n-1)}>前へ戻る</a>"
 
-document.addEventListener("DOMContentLoaded", loadImg, false)
 document.addEventListener("DOMContentLoaded", nextLink, false)
 document.addEventListener("DOMContentLoaded", previousLink, false)
+document.addEventListener("DOMContentLoaded", loadImg, false)

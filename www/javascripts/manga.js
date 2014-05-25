@@ -1,5 +1,5 @@
 (function() {
-  var getCurrentNumber, getImgTag, getPath, getURLParam, nextLink, previousLink;
+  var getCurrentNumber, getImgPath, getImgTag, getPath, getURLParam, isURLExists, nextLink, previousLink;
 
   getURLParam = function() {
     var h, hash, hashes, v, _i, _len;
@@ -14,24 +14,43 @@
     return v;
   };
 
-  getCurrentNumber = parseInt(getURLParam()['page'], 10);
+  isURLExists = function(url) {
+    var http;
+    http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status !== 404;
+  };
+
+  getCurrentNumber = function() {
+    var n;
+    n = parseInt(getURLParam()['page'], 10);
+    if (n > 0) {
+      return n;
+    } else {
+      return 0;
+    }
+  };
 
   getPath = function(p) {
     return "?page=" + p;
   };
 
+  getImgPath = function(n) {
+    return "../img/usagi/usa" + n + ".png";
+  };
+
   getImgTag = function(n) {
-    return "<img src=\"../img/usagi/usa" + n + ".png\" />";
+    return "<img src=" + (getImgPath(n)) + " />";
   };
 
   this.loadImg = function() {
     var div, n;
     div = document.getElementById("content");
-    n = getCurrentNumber;
-    if (n > 0) {
-      return div.innerHTML = "<a href=" + (getPath(n + 1)) + ">" + (getImgTag(n)) + "</a>";
-    } else {
-      return div.innerHTML = "<a href=" + (getPath(1)) + ">" + (getImgTag(0)) + "</a>";
+    n = getCurrentNumber();
+    div.innerHTML = "<a href=" + (getPath(n + 1)) + ">" + (getImgTag(n)) + "</a>";
+    if (!isURLExists(getImgPath(n))) {
+      return div.innerHTML = "";
     }
   };
 
@@ -41,11 +60,12 @@
     _results = [];
     for (_i = 0, _len = lis.length; _i < _len; _i++) {
       li = lis[_i];
-      n = getCurrentNumber;
-      if (n > 0) {
-        _results.push(li.innerHTML = "<a href=" + (getPath(getCurrentNumber + 1)) + ">次へ進む</a>");
+      n = getCurrentNumber();
+      li.innerHTML = "<a href=" + (getPath(n + 1)) + ">次へ進む</a>";
+      if (!isURLExists(getImgPath(n))) {
+        _results.push(li.innerHTML = "");
       } else {
-        _results.push(li.innerHTML = "<a href=" + (getPath(1)) + ">次へ進む</a>");
+        _results.push(void 0);
       }
     }
     return _results;
@@ -57,7 +77,7 @@
     _results = [];
     for (_i = 0, _len = lis.length; _i < _len; _i++) {
       li = lis[_i];
-      n = getCurrentNumber;
+      n = getCurrentNumber();
       if (n > 0) {
         _results.push(li.innerHTML = "<a href=" + (getPath(n - 1)) + ">前へ戻る</a>");
       } else {
@@ -67,10 +87,10 @@
     return _results;
   };
 
-  document.addEventListener("DOMContentLoaded", loadImg, false);
-
   document.addEventListener("DOMContentLoaded", nextLink, false);
 
   document.addEventListener("DOMContentLoaded", previousLink, false);
+
+  document.addEventListener("DOMContentLoaded", loadImg, false);
 
 }).call(this);
