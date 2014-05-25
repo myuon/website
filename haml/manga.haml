@@ -28,7 +28,7 @@
             %a{:href => "img/usagi/usa#{i}.png", :rel => "lightbox[usagi]", :title => "##{i}"} ##{("%02d" % i)}
           - usagi = Proc.new { |arr| arr.each { |i| usagi_i.call(i) }}
 
-          - usagi.call((0..24).to_a)
+          - usagi.call((0..29).to_a)
 
       %section.order
         %h3 単発もの
