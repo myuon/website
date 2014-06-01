@@ -17,6 +17,17 @@
       %section
         %p 数字は大体更新順(≠時系列順)
       %section.order
+        %h3 ぼたもち
+        %p
+          %a{:href => "manga/mochi.html"}
+            最初から読む
+        %p
+          - mochi_i = Proc.new do |i|
+            %a{:href => "img/mochi/mochi#{i}.png", :rel => "lightbox[mochi]", :title => "##{i}"} ##{("%02d" % i)}
+          - mochi = Proc.new { |arr| arr.each { |i| mochi_i.call(i) }}
+
+          - mochi.call((0..9).to_a)
+
         %h3 ウサギと犬。
         %p
           %a{:href => "manga/usagi.html"}
@@ -28,7 +39,7 @@
             %a{:href => "img/usagi/usa#{i}.png", :rel => "lightbox[usagi]", :title => "##{i}"} ##{("%02d" % i)}
           - usagi = Proc.new { |arr| arr.each { |i| usagi_i.call(i) }}
 
-          - usagi.call((0..32).to_a)
+          - usagi.call((0..35).to_a)
 
       %section.order
         %h3 単発もの
