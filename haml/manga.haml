@@ -21,19 +21,21 @@
         %p
           %a{:href => "manga/mochi.html"}
             最初から読む
+            %br/
+            %img{:src => "img/mochi/mochi_banner.png"}
         %p
           - mochi_i = Proc.new do |i|
             %a{:href => "img/mochi/mochi#{i}.png", :rel => "lightbox[mochi]", :title => "##{i}"} ##{("%02d" % i)}
           - mochi = Proc.new { |arr| arr.each { |i| mochi_i.call(i) }}
 
-          - mochi.call((0..9).to_a)
+          - mochi.call((0..14).to_a)
 
         %h3 ウサギと犬。
         %p
           %a{:href => "manga/usagi.html"}
             最初から読む
             %br/
-            %img{:src => "img/usagi/usagi_bannar.png"}
+            %img{:src => "img/usagi/usagi_banner.png"}
         %p
           - usagi_i = Proc.new do |i|
             %a{:href => "img/usagi/usa#{i}.png", :rel => "lightbox[usagi]", :title => "##{i}"} ##{("%02d" % i)}
