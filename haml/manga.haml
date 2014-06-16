@@ -13,9 +13,19 @@
   .pure-u-4-5#content
     %article
       %header
-        %h2 web漫画
+        %h2 web漫画ランキング
       %section
-        %p 数字は大体更新順(≠時系列順)
+        %p
+          面白かったらクリックしてください。
+        %p
+          %a{:href => "http://www.webcomicranking.com/vote.php?id=08850", :target => "_blank"}
+            %img{:src => "img/design/WCR2.png", :style => "border: 1px solid #aaa;"}
+          %a{:href => "http://www.comic-r.net/ys4/rank.cgi?mode=r_link&id=10290", :target => "_blank"}
+            %img{:src => "img/design/comicroom.png", :style => "border: 1px solid #aaa;"}
+
+    %article
+      %header
+        %h2 web漫画
       %section.order
         %h3 ぼたもち
         %p
@@ -25,10 +35,10 @@
             %img{:src => "img/mochi/mochi_banner.png"}
         %p
           - mochi_i = Proc.new do |i|
-            %a{:href => "img/mochi/mochi#{i}.png", :rel => "lightbox[mochi]", :title => "##{i}"} ##{("%02d" % i)}
+            %a{:href => "img/mochi/mochi#{i}.png", :rel => "fancybox[mochi]", :title => "##{i}", :class => "fancybox"} ##{("%02d" % i)}
           - mochi = Proc.new { |arr| arr.each { |i| mochi_i.call(i) }}
 
-          - mochi.call((0..14).to_a)
+          - mochi.call((0..28).to_a)
 
         %h3 ウサギと犬。
         %p
@@ -38,7 +48,7 @@
             %img{:src => "img/usagi/usagi_banner.png"}
         %p
           - usagi_i = Proc.new do |i|
-            %a{:href => "img/usagi/usa#{i}.png", :rel => "lightbox[usagi]", :title => "##{i}"} ##{("%02d" % i)}
+            %a{:href => "img/usagi/usa#{i}.png", :rel => "fancybox[usagi]", :title => "##{i}", :class => "fancybox"} ##{("%02d" % i)}
           - usagi = Proc.new { |arr| arr.each { |i| usagi_i.call(i) }}
 
           - usagi.call((0..35).to_a)
@@ -46,24 +56,23 @@
       %section.order
         %h3 単発もの
         %p
-          %a{:href => "img/manga/4koma_0.png", :rel => "lightbox[4koma]"} #0
-          %a{:href => "img/manga/4koma_2.png", :rel => "lightbox[4koma]"} #2
-          %a{:href => "img/manga/4koma_6.png", :rel => "lightbox[4koma]"} #6
-          %a{:href => "img/manga/4koma_7.png", :rel => "lightbox[4koma]"} #7
+          %a{:href => "img/manga/4koma_0.png", :rel => "fancybox[4koma]", :class => "fancybox"} #0
+          %a{:href => "img/manga/4koma_2.png", :rel => "fancybox[4koma]", :class => "fancybox"} #2
+          %a{:href => "img/manga/4koma_6.png", :rel => "fancybox[4koma]", :class => "fancybox"} #6
+          %a{:href => "img/manga/4koma_7.png", :rel => "fancybox[4koma]", :class => "fancybox"} #7
         %p
           Haskell関係
         %p
-          %a{:href => "img/manga/haskell_coq_1.png", :rel => "lightbox[4koma]"} HaskellたんとCoqたん
-          %a{:href => "img/manga/lens_comic.png", :rel => "lightbox[4koma]"} Lens
-          
-    %article
-      %header
-        %h2 WCR投票
-      %section
-        %p
-          面白かったらクリックしてください。
-        %p
-          %a{:href => "http://www.webcomicranking.com/vote.php?id=08850", :target => "_blank"}
-            %img{:src => "img/design/WCR.png", :style => "border: 1px solid #aaa;"}
+          %a{:href => "img/manga/haskell_coq_1.png", :rel => "fancybox[4koma]", :class => "fancybox"} HaskellたんとCoqたん
+          %a{:href => "img/manga/lens_comic.png", :rel => "fancybox[4koma]", :class => "fancybox"} Lens
 
+    %article
+      %p
+        %a{:href => "http://www.webcomicranking.com/", :target => "_blank"}
+          %img{:src => "img/design/wcrbn04_n.gif"}
+        %a{:href => "http://www.comic-r.net/", :target => "_blank"}
+          %img{:src => "img/design/banner-S01.gif"}
+        %a{:href => "http://www.4koma.dojin.com/", :target => "_blank"}
+          %img{:src => "img/design/4komaba01.jpg"}
+          
 = Haml::Engine.new(File.read("haml/_footer.haml")).render

@@ -4,10 +4,11 @@
 <title>みょんさんの。</title>
 <link href='stylesheets/pure-min.css' rel='stylesheet'>
 <link href='stylesheets/custom.css' rel='stylesheet'>
-<link href='stylesheets/lightbox.css' rel='stylesheet'>
-<script src='javascripts/prototype.lite.js'></script>
-<script src='javascripts/moo.fx.js'></script>
-<script src='javascripts/litebox-1.0.js'></script>
+<link href='stylesheets/jquery.fancybox.css' rel='stylesheet'>
+<link href='stylesheets/jquery.fancybox-buttons.css' rel='stylesheet'>
+<script src='javascripts/jquery-1.10.1.min.js'></script>
+<script src='javascripts/jquery.fancybox.pack.js'></script>
+<script src='javascripts/jquery.fancybox-buttons.js'></script>
 <header id="logo">
   <div class="pure-g-r">
     <div class="pure-u-3-24"></div>
@@ -122,7 +123,15 @@
   </div>
 </footer>
 <script>
-  initLightbox()
+  $(document).ready(function() {
+    $(".fancybox").fancybox({
+      fitToView: false,
+      loop: false,
+      helpers: {
+        buttons: {}
+      }
+    });
+  });
 </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
