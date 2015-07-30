@@ -27,6 +27,23 @@
       %header
         %h2 web漫画
       %section.order
+        %h3 ナントカとまりちゃん
+        %p
+          %a{:href => "img/nazo4/spacedeb.png", :rel => "fancybox[nazo4]", :title => "スペースデブリ", :class => "fancybox"} #00
+          %a{:href => "img/nazo4/convini1.png", :rel => "fancybox[nazo4]", :title => "コンビニ1", :class => "fancybox"} #01
+          %a{:href => "img/nazo4/convini2.png", :rel => "fancybox[nazo4]", :title => "コンビニ2", :class => "fancybox"} #02
+          %a{:href => "img/nazo4/pankui.png", :rel => "fancybox[nazo4]", :title => "パン食い競争", :class => "fancybox"} #03
+          %a{:href => "img/nazo4/murijii.png", :rel => "fancybox[nazo4]", :title => "無理強い", :class => "fancybox"} #04
+          %a{:href => "img/nazo4/izumino.png", :rel => "fancybox[nazo4]", :title => "ペアルック", :class => "fancybox"} #05
+          %a{:href => "img/nazo4/yarukino.png", :rel => "fancybox[nazo4]", :title => "やる気のつるぎ", :class => "fancybox"} #06
+          %a{:href => "img/nazo4/bukinimo.png", :rel => "fancybox[nazo4]", :title => "※武器にもなります", :class => "fancybox"} #07
+          %a{:href => "img/nazo4/offsen.png", :rel => "fancybox[nazo4]", :title => "OFFSEN", :class => "fancybox"} #08
+          %a{:href => "img/nazo4/shuuchi.png", :rel => "fancybox[nazo4]", :title => "羞恥プレイ", :class => "fancybox"} #09
+          %a{:href => "img/nazo4/takoyakiki.png", :rel => "fancybox[nazo4]", :title => "たこ焼き器", :class => "fancybox"} #10
+          %a{:href => "img/nazo4/jibyou.png", :rel => "fancybox[nazo4]", :title => "持病", :class => "fancybox"} #11
+          %a{:href => "img/nazo4/pankui2.png", :rel => "fancybox[nazo4]", :title => "パン食い競争2", :class => "fancybox"} #12
+
+      %section.order
         %h3 ぼたもち
         %p
           %a{:href => "manga/mochi.html"}
@@ -38,7 +55,7 @@
             %a{:href => "img/mochi/mochi#{i}.png", :rel => "fancybox[mochi]", :title => "##{i}", :class => "fancybox"} ##{("%02d" % i)}
           - mochi = Proc.new { |arr| arr.each { |i| mochi_i.call(i) }}
 
-          - mochi.call((0..28).to_a)
+          - mochi.call((0..38).to_a)
 
         %h3 ウサギと犬。
         %p
